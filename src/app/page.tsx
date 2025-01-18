@@ -1,5 +1,4 @@
 import StatusLabel, { Status } from '@/app/components/status-label';
-import { headers } from 'next/headers';
 
 import AddCompanyButton from './components/add-company-button';
 export default function Home() {
