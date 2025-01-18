@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { Status } from '@/app/components/status-label';
-import Header from '../components/header';
-import Toolbar from '../components/toolbar';
-import AddCompanyButton from '../components/add-company-button';
-import SearchInput from '../components/search-input';
-import CompanyTable from '../components/company-table';
-import CompanyRow from '../components/company-row';
+import Header from '../../components/header';
+import Toolbar from '../../components/toolbar';
+import AddCompanyButton from '../../components/add-company-button';
+import SearchInput from '../../components/search-input';
+import CompanyTable from '../../components/company-table';
+import CompanyRow from '../../components/company-row';
 
 export interface PageProps {}
 
