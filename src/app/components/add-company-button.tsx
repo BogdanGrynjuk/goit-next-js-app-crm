@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import Button from '@/app/components/button';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/navigation';
 // import CompanyFormModal from './company-form-modal';
 
 const CompanyFormModal = dynamic(() => import('./company-form-modal'), {
@@ -11,18 +12,9 @@ const CompanyFormModal = dynamic(() => import('./company-form-modal'), {
 });
 
 const AddCompanyButton = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const router = useRouter();
   return (
-    <>
-      <Button onClick={() => setIsModalOpen(true)}>Add company</Button>
-      {isModalOpen && (
-        <CompanyFormModal
-          show={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          onSubmit={console.log}
-        />
-      )}
-    </>
+    <Button onClick={() => router.push('/companies/new')}>Add company</Button>
   );
 };
 

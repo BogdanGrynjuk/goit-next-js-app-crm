@@ -9,13 +9,13 @@ import MagiButton from '@/app/components/magic-button';
 export interface PageProps {}
 
 const Page = async ({}: PageProps) => {
-  // const data = await getSummarySales();
+  const data = await getSummarySales();
 
-  const data = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(getSummarySales());
-    }, 2000);
-  });
+  // const data = await new Promise((resolve) => {
+  //   setTimeout(() => {
+  //     resolve(getSummarySales());
+  //   }, 2000);
+  // });
 
   return (
     <DashboardCard
