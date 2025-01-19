@@ -6,7 +6,8 @@ interface PageProps {}
 const page = ({}: PageProps) => {
   return (
     <main>
-      <Header>Dashboard Page</Header>
+      <Header>Dashboard Page / New Companies</Header>
+      <div>Some additional info</div>
     </main>
   );
 };
