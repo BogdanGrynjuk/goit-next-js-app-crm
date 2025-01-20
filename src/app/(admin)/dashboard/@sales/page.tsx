@@ -11,21 +11,8 @@ export interface PageProps {}
 const Page = async ({}: PageProps) => {
   const data = await getSummarySales();
 
-  // const data = await new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve(getSummarySales());
-  //   }, 2000);
-  // });
-
   return (
-    <DashboardCard
-      label={
-        <>
-          Sales details
-          <MagiButton />
-        </>
-      }
-    >
+    <DashboardCard label="Sales details">
       <SummaryTable
         headers={
           <>

@@ -1,14 +1,13 @@
 import React from 'react';
-import { getSummaryPromotions } from '@/lib/api';
+import { getPromotions } from '@/lib/api';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableHeader from '@/app/components/summary-table-header';
 import SummaryTableCell from '@/app/components/summary-table-cell';
 import DashboardCard from '@/app/components/dashboard-card';
 
 export interface PageProps {}
-
 const Page = async ({}: PageProps) => {
-  const data = await getSummaryPromotions();
+  const data = await getPromotions();
 
   return (
     <DashboardCard label="Promotions">
@@ -21,10 +20,10 @@ const Page = async ({}: PageProps) => {
           </>
         }
       >
-        {data.map(({ promotionId, promotionName, companyTitle, discount }) => (
-          <tr key={promotionId}>
+        {data.map(({ id, title, companyTitle, discount }) => (
+          <tr key={id}>
             <SummaryTableCell>{companyTitle}</SummaryTableCell>
-            <SummaryTableCell>{promotionName}</SummaryTableCell>
+            <SummaryTableCell>{title}</SummaryTableCell>
             <SummaryTableCell align="center">{`-${discount}%`}</SummaryTableCell>
           </tr>
         ))}

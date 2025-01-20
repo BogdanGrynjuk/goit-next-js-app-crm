@@ -7,9 +7,10 @@ import React from 'react';
 export interface InputInterfaceProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
+  as?: 'select' | 'textarea';
 }
 
-const InputField = ({ label, id, ...rest }: InputInterfaceProps) => {
+const InputField = ({ label, as, id, ...rest }: InputInterfaceProps) => {
   return (
     <div className="flex flex-col gap-y-2">
       {label && (
@@ -22,9 +23,10 @@ const InputField = ({ label, id, ...rest }: InputInterfaceProps) => {
       )}
       <Field
         {...rest}
+        as={as}
         id={id}
         className={clsx(
-          'p-3 border border-solid border-gray-300 rounded bg-white shadow',
+          'p-3 border border-solid border-gray-300 rounded bg-white shadow h-11',
         )}
       />
     </div>
