@@ -6,7 +6,7 @@ export interface PromotionProps {
   promotion: PromotionType;
 }
 
-export default function Promotion({ promotion }: PromotionProps) {
+const Promotion = ({ promotion }: PromotionProps) => {
   return (
     <div className="rounded overflow-hidden	bg-gray-100">
       <div className="relative w-full h-40 bg-gray-300">
@@ -26,4 +26,6 @@ export default function Promotion({ promotion }: PromotionProps) {
       </div>
     </div>
   );
-}
+};
+
+export default Promotion;

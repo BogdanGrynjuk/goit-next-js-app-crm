@@ -133,3 +133,15 @@ export const createPromotion = async (
     },
   });
 };
+
+// export const deletePromotion = async (id: string, init?: RequestInit) => {
+//   if (!id) throw new Error('Promotion ID is required for deletion');
+
+//   return sendRequest<void>(buildUrl(`promotions/${id}`), {
+//     method: 'DELETE',
+//     headers: {
+//       ...(init && init.headers),
+//       'content-type': 'application/json',
+//     },
+//   });
+// };
