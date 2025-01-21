@@ -12,7 +12,6 @@ The CRM Admin Interface is designed to streamline the management of company data
 - **React Query**: Data-fetching library for managing server state.
 - **Formik**: Form library for React to handle form state and validation.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Styling**: CSS.
 
 ## Installation
 
